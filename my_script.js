@@ -1,4 +1,5 @@
-function sayhello(){
+function sayhello()
+{
         let user=document.getElementById("username").value;
         if(user == '')
         {
@@ -12,7 +13,7 @@ function sayhello(){
         }
 
         document.getElementById("username").value="";
-    }
+}
 
 // document.getElementById("click").onclick=sayhello;
 document.addEventListener('DOMContentLoaded',function(){
