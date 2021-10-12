@@ -6,22 +6,13 @@
   <script>
     document.addEventListener('DOMContentLoaded',function(){
 
-      // on red button click
-      document.getElementById("red").onclick=function(){
+        document.querySelectorAll("button").forEach(button => {
 
-        document.getElementById("heading").style.color='red';
-      }
-      // on green button click
-      document.getElementById("green").onclick=function(){
+          button.onclick=function(){
+            document.getElementById("heading").style.color=button.dataset.color;
+          }
 
-        document.getElementById("heading").style.color='green';
-      }
-
-      // on blue button click
-      document.getElementById("blue").onclick=function(){
-
-        document.getElementById("heading").style.color='blue';
-      }
+        })
 
     })
   </script>
@@ -29,9 +20,10 @@
 <body>
   <h1 id="heading">Hello</h1>
   <br>
-  <button id="red">Red</button>
-  <button id="green">Green</button>
-  <button id="blue">Blue</button>
+  <button data-color="red">Red</button>
+  <button data-color="green">Green</button>
+  <button data-color="blue">Blue</button>
+  <button data-color="pink">Pink</button>
 
 
 
